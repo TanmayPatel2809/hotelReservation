@@ -45,9 +45,9 @@ pipeline{
 
                         gcloud auth configure-docker --quiet
 
-                        docker build -t gcr.io/${GCP_PROJECT}/ml-project:latest .
+                        docker build --build-arg GOOGLE_APPLICATION_CREDENTIALS_CONTENT="$(cat ${GOOGLE_APPLICATION_CREDENTIALS})" -t gcr.io/${GCP_PROJECT}/hotelreservation:latest .
 
-                        docker push gcr.io/${GCP_PROJECT}/ml-project:latest 
+                        docker push gcr.io/${GCP_PROJECT}/hotelreservation:latest 
 
                         '''
                     }

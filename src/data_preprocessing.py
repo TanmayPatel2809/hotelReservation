@@ -5,12 +5,7 @@ from src.logger import get_logger
 from src.custom_exception import CustomException
 from config.paths_config import *
 from utils.common_functions import read_yaml,load_data
-from sklearn.model_selection import StratifiedKFold
-import xgboost as xgb
-from sklearn.feature_selection import RFECV
 from imblearn.over_sampling import SMOTE
-from statsmodels.stats.outliers_influence import variance_inflation_factor
-from statsmodels.tools.tools import add_constant
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OneHotEncoder
 import joblib

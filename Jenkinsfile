@@ -70,7 +70,7 @@ pipeline{
                         gcloud run deploy hotelreservation \
                             --image=gcr.io/${GCP_PROJECT}/hotelreservation:latest \
                             --platform=managed \
-                            --region=asia-south1
+                            --region=asia-south1 \
                             --allow-unauthenticated
 
                         '''

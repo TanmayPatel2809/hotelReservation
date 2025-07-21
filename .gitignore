@@ -1,0 +1,8 @@
+venv/
+mlruns/
+logs/
+hotelReservation.egg-info/
+__pycache__/
+artifacts/
+*.csv
+*.pkl

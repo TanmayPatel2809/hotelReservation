@@ -70,8 +70,13 @@ pipeline{
                         gcloud run deploy hotelreservation \
                             --image=gcr.io/${GCP_PROJECT}/hotelreservation:latest \
                             --platform=managed \
-                            --region=asia-south1 \
+                            --region=us-central1 \
                             --allow-unauthenticated
+
+                        gcloud run domain-mappings create \
+                            --service=hotelreservation \
+                            --domain=hotelreservation.tanmay-patel.space \
+                            --region=us-central1
 
                         '''
                     }

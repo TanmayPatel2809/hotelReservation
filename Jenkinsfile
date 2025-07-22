@@ -73,7 +73,8 @@ pipeline{
                             --region=us-central1 \
                             --allow-unauthenticated
 
-                        gcloud run domain-mappings create \
+                        gcloud beta run domain-mappings describe --domain=hotelreservation.tanmay-patel.space --region=us-central1 || \
+                        gcloud beta run domain-mappings create \
                             --service=hotelreservation \
                             --domain=hotelreservation.tanmay-patel.space \
                             --region=us-central1
